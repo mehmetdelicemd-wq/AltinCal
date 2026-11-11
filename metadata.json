@@ -1,5 +1,10 @@
 {
+  "requestFramePermissions": [
+    "microphone"
+  ],
   "name": "Altın Hesaplayıcı Pro",
-  "description": "Güncel ons altın ve dolar/TL kuru verilerini kullanarak anlık gram altın fiyatı hesaplayan ve piyasa trendlerini takip eden profesyonel bir araç.",
-  "requestFramePermissions": []
+  "description": "Canlı altın, gümüş ve kripto para hesaplayıcı, piyasa analizleri ve yapay zeka finans asistanı.",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

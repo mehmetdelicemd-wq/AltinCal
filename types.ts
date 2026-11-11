@@ -10,12 +10,19 @@ export interface PriceData {
   gramChange: number;
   silverPrice: number;
   silverChange: number;
+  silverOuncePrice: number;
+  goldSilverRatio: number;
+  quarterGoldPrice: number;
+  halfGoldPrice: number;
+  fullGoldPrice: number;
   btcPrice: number;
   btcChange: number;
   ethPrice: number;
   ethChange: number;
   timestamp: string;
   sources: Array<{ title: string; uri: string }>;
+  searchGroundedAt?: string;
+  searchStatus?: 'idle' | 'updating' | 'synced' | 'error' | 'rate_limited';
 }
 
 export interface NewsItem {
@@ -24,6 +31,20 @@ export interface NewsItem {
   url: string;
   source: string;
   date: string;
+  imageUrl?: string;
+  category?: 'altin' | 'gumus' | 'doviz' | 'kripto' | 'makro';
+  readTime?: string;
+}
+
+export interface PortfolioHistoryPoint {
+  date: string;
+  totalValue: number;
+  goldValue: number;
+  silverValue: number;
+  usdValue: number;
+  cryptoValue: number;
+  customValue: number;
+  dailyChange: number;
 }
 
 export interface ChatMessage {
@@ -37,13 +58,6 @@ export interface OHLCData {
   high: number;
   low: number;
   close: number;
-}
-
-export interface PriceAlert {
-  id: string;
-  targetPrice: number;
-  type: 'above' | 'below';
-  isActive: boolean;
 }
 
 export interface Asset {
@@ -62,3 +76,5 @@ export interface MarketSummary {
   loading: boolean;
   error: string | null;
 }
+
+export type AppLanguage = 'tr' | 'en';
